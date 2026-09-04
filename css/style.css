@@ -285,9 +285,70 @@ body {
   box-shadow: 0 12px 30px rgba(255, 156, 31, 0.6);
 }
 
-/* ===================================================================
-   FLOATING AUDIO PLAYER & BOTTOM NAV
-   =================================================================== */
+.floating-scroll-btn {
+  position: fixed;
+  bottom: 142px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(18, 20, 28, 0.92);
+  backdrop-filter: blur(8px);
+  border: 2px solid var(--color-amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 156, 31, 0.35);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 481px) {
+  .floating-scroll-btn {
+    right: calc(50% - 240px + 20px);
+  }
+}
+
+.floating-scroll-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--color-amber);
+  transition: transform 0.3s ease;
+}
+
+.floating-scroll-btn.active {
+  background: linear-gradient(135deg, var(--color-amber), #d4af37);
+  box-shadow: 0 0 20px rgba(255, 156, 31, 0.8);
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+.floating-scroll-btn.active svg {
+  fill: #0d0e12;
+}
+
+.floating-scroll-btn .scroll-tooltip {
+  position: absolute;
+  right: 58px;
+  background: rgba(18, 20, 28, 0.95);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  border: 1px solid var(--color-border-gold);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.25s ease;
+}
+
+.floating-scroll-btn:hover .scroll-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 .floating-audio-btn {
   position: fixed;

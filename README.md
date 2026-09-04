@@ -20,29 +20,24 @@ Website undangan pernikahan digital bertema adat Jawa elegan (*Royal Javanese Da
 2. **Musik Pengiring Tradisional Jawa**:
    - Audio gamelan Jawa sakral (*Kebogiro*) yang otomatis berputar saat tamu menekan tombol "Buka Undangan".
    - Tombol melayang piringan hitam (*spinning vinyl*) di pojok kanan bawah untuk mengontrol musik (play/pause).
-3. **Menu Navigasi Melayang (Floating Bottom Nav)**:
-   - Pintasan cepat ke bagian: Beranda, Mempelai, Acara, Kisah, Galeri, RSVP, dan Kado.
-4. **Profil Pasangan Mempelai**:
-   - Foto adat Jawa dengan busana Beskap dan Kebaya Paes Ageng.
-   - Informasi nama orang tua dan akun media sosial.
-5. **Kutipan Doa & Hitung Mundur (Countdown Timer)**:
+3. **Fitur Auto Scroll Otomatis**:
+   - Tombol melayang untuk mengaktifkan dan mematikan fitur gulir otomatis (*Auto Scroll*) dengan kecepatan membaca yang nyaman.
+4. **Menu Navigasi Melayang (Floating Bottom Nav)**:
+   - Pintasan cepat ke bagian: Beranda, Mempelai, Acara, RSVP, dan Kado.
+5. **Profil Pasangan Mempelai**:
+   - Foto adat Jawa dengan busana Beskap dan Kebaya Paes Ageng serta tautan akun media sosial.
+6. **Kutipan Doa & Hitung Mundur (Countdown Timer)**:
    - QS. Ar-Rum Ayat 21 dalam kaligrafi Arab beserta terjemahannya.
    - Timer *real-time* (Hari, Jam, Menit, Detik) menuju waktu akad nikah.
-6. **Rangkaian Acara & Peta Interaktif**:
+7. **Rangkaian Acara & Peta Interaktif**:
    - Jadwal Akad Nikah & Resepsi Pernikahan.
    - Tombol petunjuk arah ke Google Maps.
    - Tombol **"Simpan ke Google Calendar"**.
-   - Embed Google Maps interaktif.
-7. **Kisah Cinta (Our Story) & Susunan Acara**:
-   - Perjalanan cinta kedua mempelai.
-   - Rundown waktu kegiatan prosesi adat pernikahan.
-8. **Galeri Prewedding & Video Sinematik**:
-   - Grid foto prewedding dengan fitur pembesar gambar layar penuh (*Lightbox Popup*).
-   - Embed video teaser prewedding.
-9. **Buku Tamu / RSVP Interaktif**:
+   - Embed Google Maps interaktif lokasi SMK Bhakti Wiyata, Kediri.
+8. **Buku Tamu / RSVP Interaktif**:
    - Formulir konfirmasi kehadiran dan pengiriman ucapan doa restu.
    - Komentar tersimpan di penyimpanan browser (`localStorage`) dan langsung tampil secara *real-time*.
-10. **Amplop Digital & Kado Fisik**:
+9. **Amplop Digital & Kado Fisik**:
     - Rekening Bank BCA & Bank Mandiri dengan tombol **1-Klik Salin Nomor Rekening** disertai notifikasi *toast*.
     - Alamat pengiriman kado fisik dengan tombol **1-Klik Salin Alamat**.
 

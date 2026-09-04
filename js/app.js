@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGuestPersonalization();
   initCoverAndAudio();
   initCountdown();
-  initGalleryLightbox();
+  initAutoScroll();
   initClipboardCopy();
   initRsvpAndWishes();
   initBottomNavSpy();
@@ -173,42 +173,74 @@ function initCountdown() {
 }
 
 /* ===================================================================
-   4. LIGHTBOX GALERI FOTO
+   4. FITUR AUTO SCROLL (GULIR OTOMATIS AKTIF / NONAKTIF)
    =================================================================== */
-function initGalleryLightbox() {
-  const modal = document.getElementById('lightboxModal');
-  const modalImg = document.getElementById('lightboxImg');
-  const closeBtn = document.getElementById('lightboxClose');
-  const galleryItems = document.querySelectorAll('.gallery-item img');
+function initAutoScroll() {
+  const scrollBtn = document.getElementById('floatingAutoScrollBtn');
+  const scrollIcon = document.getElementById('scrollIcon');
+  let isAutoScrolling = false;
+  let scrollInterval = null;
 
-  if (!modal || !modalImg) return;
+  if (!scrollBtn) return;
 
-  galleryItems.forEach(img => {
-    img.addEventListener('click', (e) => {
-      e.stopPropagation();
-      modalImg.src = img.src;
-      modalImg.alt = img.alt || 'Foto Galeri';
-      modal.classList.add('active');
-    });
+  scrollBtn.addEventListener('click', () => {
+    if (isAutoScrolling) {
+      stopAutoScroll();
+      showToast('Auto scroll dinonaktifkan');
+    } else {
+      startAutoScroll();
+      showToast('Auto scroll aktif');
+    }
   });
 
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
+  function startAutoScroll() {
+    isAutoScrolling = true;
+    scrollBtn.classList.add('active');
+    if (scrollIcon) {
+      // Icon Pause (||)
+      scrollIcon.innerHTML = `
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      `;
+    }
+
+    scrollInterval = setInterval(() => {
+      window.scrollBy(0, 1.2);
+
+      // Berhenti otomatis jika mencapai akhir halaman
+      if ((window.innerHeight + window.pageYOffset) >= document.documentElement.scrollHeight - 10) {
+        stopAutoScroll();
+        showToast('Sudah mencapai bagian akhir undangan');
+      }
+    }, 22);
   }
 
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal || e.target === closeBtn) {
-      modal.classList.remove('active');
+  function stopAutoScroll() {
+    isAutoScrolling = false;
+    if (scrollInterval) {
+      clearInterval(scrollInterval);
+      scrollInterval = null;
     }
-  });
+    scrollBtn.classList.remove('active');
+    if (scrollIcon) {
+      // Icon Panah Bawah
+      scrollIcon.innerHTML = `
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+      `;
+    }
+  }
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      modal.classList.remove('active');
+  // Jika pengguna melakukan scroll manual dengan mousewheel atau sentuhan layar, jeda auto scroll
+  window.addEventListener('wheel', () => {
+    if (isAutoScrolling) {
+      stopAutoScroll();
     }
-  });
+  }, { passive: true });
+
+  window.addEventListener('touchmove', () => {
+    if (isAutoScrolling) {
+      stopAutoScroll();
+    }
+  }, { passive: true });
 }
 
 /* ===================================================================

@@ -32,6 +32,14 @@
     Browser Anda tidak mendukung elemen audio.
   </audio>
 
+  <!-- Floating Controls -->
+  <button id="floatingAutoScrollBtn" class="floating-scroll-btn" aria-label="Toggle Auto Scroll" title="Aktifkan / Matikan Auto Scroll">
+    <svg id="scrollIcon" viewBox="0 0 24 24">
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+    </svg>
+    <span class="scroll-tooltip">Auto Scroll</span>
+  </button>
+
   <button id="floatingAudioBtn" class="floating-audio-btn" aria-label="Toggle Musik Pengiring" title="Putar / Hentikan Musik">
     <svg id="audioIcon" viewBox="0 0 24 24">
       <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
@@ -119,11 +127,7 @@
           </div>
           <h3 class="mempelai-name-full">Wira Bagus Setiawan Putra, S.T.</h3>
           <p class="mempelai-call-name">- Wira -</p>
-          <p class="mempelai-parents">
-            Putra pertama dari pasangan:<br>
-            <strong>Bapak H. Bambang Setiawan</strong><br>&amp;<br><strong>Ibu Hj. Retno Wardani</strong><br>
-            <small style="color: var(--color-amber);">Beralamat di Sleman, D.I. Yogyakarta</small>
-          </p>
+          <div style="margin-bottom: 16px;"></div>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social-ig">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -141,11 +145,7 @@
           </div>
           <h3 class="mempelai-name-full">Neerafadiya Ayunda Syakira, S.Kom.</h3>
           <p class="mempelai-call-name">- Neera -</p>
-          <p class="mempelai-parents">
-            Putri kedua dari pasangan:<br>
-            <strong>Bapak Ir. H. Agus Suryanto</strong><br>&amp;<br><strong>Ibu Hj. Dewi Anggraini</strong><br>
-            <small style="color: var(--color-amber);">Beralamat di Kota Yogyakarta</small>
-          </p>
+          <div style="margin-bottom: 16px;"></div>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social-ig">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -259,147 +259,6 @@
       <div class="map-embed-container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.888762413813!2d112.0006734757538!3d-7.811129977558667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7857a2245b0bb5%3A0x6a057f921d7b3017!2sSMK%20Bhakti%20Wiyata!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi Pernikahan SMK Bhakti Wiyata"></iframe>
-      </div>
-    </section>
-
-    <!-- SECTION SUSUNAN ACARA (RUNDOWN TIMELINE) -->
-    <section class="section-rundown">
-      <span class="section-tag">Tata Lampah</span>
-      <h2 class="section-title text-gold-gradient">Susunan Acara</h2>
-      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
-
-      <div class="timeline-vertical">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">07.30 - 08.00 WIB</div>
-          <div class="timeline-title">Kedatangan &amp; Registrasi Tamu</div>
-          <div class="timeline-desc">Keluarga dan para tamu undangan mulai tiba di area pelataran pendopo.</div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">08.00 - 09.30 WIB</div>
-          <div class="timeline-title">Prosesi Ijab Qabul (Akad Nikah)</div>
-          <div class="timeline-desc">Pembacaan ayat suci Al-Qur'an, khutbah nikah, ijab qabul sakral, doa, dan penyerahan mahar.</div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">09.30 - 10.30 WIB</div>
-          <div class="timeline-title">Upacara Adat Panggih Penganten</div>
-          <div class="timeline-desc">Upacara balangan suruh, wiji dadi (menginjak telur), sinduran, kacar-kucur, dulangan, dan sungkeman kepada orang tua.</div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">11.00 - 14.00 WIB</div>
-          <div class="timeline-title">Pahargyan Resepsi &amp; Ramah Tamah</div>
-          <div class="timeline-desc">Pemberian ucapan selamat, santap siang hidangan prasmanan khas Jawa, serta alunan gending gamelan Jawa klasik.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION KISAH CINTA (OUR STORY) -->
-    <section id="kisah" class="section-story">
-      <span class="section-tag">Crita Asmara</span>
-      <h2 class="section-title text-gold-gradient">Kisah Perjalanan Cinta</h2>
-      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
-
-      <div class="story-card">
-        <div class="story-card-header">
-          <div class="story-icon-badge">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-          </div>
-          <div>
-            <div class="story-year">2021</div>
-            <div class="story-headline">Awal Mula Berjumpa</div>
-          </div>
-        </div>
-        <p class="story-text">
-          Pertemuan pertama kami bermula dari sebuah proyek kolaborasi kreatif di Yogyakarta. Berawal dari diskusi pekerjaan yang santai, obrolan hangat perlahan menumbuhkan kecocokan rasa dan kedekatan yang istimewa di hati kami berdua.
-        </p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-header">
-          <div class="story-icon-badge">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-          </div>
-          <div>
-            <div class="story-year">2024</div>
-            <div class="story-headline">Ikatan Janji &amp; Lamaran</div>
-          </div>
-        </div>
-        <p class="story-text">
-          Setelah melewati tiga tahun penuh canda, tawa, dan saling menguatkan dalam berbagai perjalanan hidup, Wira memberanikan diri menyatakan niat tulus untuk meminang Neera di hadapan kedua keluarga besar dalam acara lamaran adat Jawa yang hangat.
-        </p>
-      </div>
-
-      <div class="story-card">
-        <div class="story-card-header">
-          <div class="story-icon-badge">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 21l3.52-.61C9.36 20.73 10.64 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
-          </div>
-          <div>
-            <div class="story-year">2026</div>
-            <div class="story-headline">Menuju Pelaminan Suci</div>
-          </div>
-        </div>
-        <p class="story-text">
-          Kini dengan memohon ridho Allah SWT serta restu orang tua dan keluarga tercinta, kami memantapkan langkah merajut mahligai rumah tangga yang sakinah, mawaddah, warahmah dalam ikatan suci pernikahan.
-        </p>
-      </div>
-    </section>
-
-    <!-- SECTION GALERI FOTO PREWEDDING & VIDEO -->
-    <section id="galeri" class="section-gallery">
-      <span class="section-tag">Dokumentasi</span>
-      <h2 class="section-title text-gold-gradient">Galeri Prewedding</h2>
-      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
-
-      <div class="gallery-grid">
-        <div class="gallery-item large">
-          <img src="assets/images/couple_cover.jpg" alt="Foto Prewedding Jawa Wira &amp; Neera" loading="lazy">
-          <div class="gallery-overlay">
-            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="assets/images/groom.jpg" alt="Wira Bagus Setiawan Putra" loading="lazy">
-          <div class="gallery-overlay">
-            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="assets/images/bride.jpg" alt="Neerafadiya Ayunda Syakira" loading="lazy">
-          <div class="gallery-overlay">
-            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="assets/images/gallery1.jpg" alt="Prewedding Garden Heritage" loading="lazy">
-          <div class="gallery-overlay">
-            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="assets/images/gallery2.jpg" alt="Prewedding Romantic Evening" loading="lazy">
-          <div class="gallery-overlay">
-            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prewedding Video Trailer -->
-      <span class="section-tag" style="margin-top: 15px;">Sinematik Video</span>
-      <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: #fff; margin-bottom: 12px;">Prewedding Teaser</h3>
-      <div class="video-frame-container">
-        <iframe src="https://www.youtube.com/embed/7ztcdznpX9w?rel=0&modestbranding=1" 
-                title="Video Prewedding Teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -563,9 +422,7 @@
       <div class="closing-signature">Wira &amp; Neera</div>
 
       <p class="closing-family">
-        Beserta segenap keluarga besar:<br>
-        <strong>Keluarga Bpk. H. Bambang Setiawan &amp; Ibu Hj. Retno Wardani</strong><br>
-        <strong>Keluarga Bpk. Ir. H. Agus Suryanto &amp; Ibu Hj. Dewi Anggraini</strong>
+        Beserta segenap keluarga besar kedua mempelai
       </p>
     </section>
 
@@ -587,14 +444,6 @@
       <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
       <span>Acara</span>
     </a>
-    <a href="#kisah" class="nav-item" title="Kisah Cinta">
-      <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
-      <span>Kisah</span>
-    </a>
-    <a href="#galeri" class="nav-item" title="Galeri">
-      <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-      <span>Galeri</span>
-    </a>
     <a href="#rsvp" class="nav-item" title="RSVP &amp; Ucapan">
       <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
       <span>RSVP</span>
@@ -604,14 +453,6 @@
       <span>Kado</span>
     </a>
   </nav>
-
-  <!-- ===================================================================
-       LIGHTBOX MODAL FOR GALLERY
-       =================================================================== -->
-  <div id="lightboxModal" class="lightbox-modal">
-    <button id="lightboxClose" class="lightbox-close" aria-label="Tutup Galeri">&times;</button>
-    <img id="lightboxImg" class="lightbox-img" src="" alt="Foto Resolusi Penuh">
-  </div>
 
   <!-- Toast Notification element -->
   <div id="toastNotification" class="toast-notification"></div>
