@@ -7,8 +7,8 @@ Website undangan pernikahan digital bertema adat Jawa elegan (*Royal Javanese Da
 ## 🤵👰 Mempelai
 - **Mempelai Pria**: Wira Bagus Setiawan Putra, S.T.
 - **Mempelai Wanita**: Neerafadiya Ayunda Syakira, S.Kom.
-- **Hari & Tanggal Acara**: Minggu, 18 Oktober 2026
-- **Lokasi Acara**: Hyatt Regency Yogyakarta & Pendopo Ageng Sasana Budaya
+- **Hari & Tanggal Acara**: Kamis, 10 September 2026
+- **Lokasi Acara**: Gedung Graha Lantai 4 - SMK Bhakti Wiyata, Kota Kediri, Jawa Timur
 
 ---
 

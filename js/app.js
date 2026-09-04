@@ -137,8 +137,8 @@ function initCoverAndAudio() {
    3. HITUNG MUNDUR (COUNTDOWN TIMER) REAL-TIME
    =================================================================== */
 function initCountdown() {
-  // Tanggal Pernikahan Wira & Neera: Minggu, 18 Oktober 2026, 08:00 WIB
-  const weddingDate = new Date('October 18, 2026 08:00:00 GMT+0700').getTime();
+  // Tanggal Pernikahan Wira & Neera: Kamis, 10 September 2026, 08:00 WIB
+  const weddingDate = new Date('September 10, 2026 08:00:00 GMT+0700').getTime();
 
   const elDays = document.getElementById('cdDays');
   const elHours = document.getElementById('cdHours');
