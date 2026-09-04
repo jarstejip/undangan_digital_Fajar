@@ -19,8 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function initGuestPersonalization() {
   const urlParams = new URLSearchParams(window.location.search);
   let guestName = urlParams.get('kpd') || urlParams.get('to');
+  let guestLocation = urlParams.get('di') || urlParams.get('lokasi');
 
   const guestElement = document.getElementById('guestNameDisplay');
+  const guestLocElement = document.getElementById('guestLocationDisplay');
   const rsvpNameInput = document.getElementById('rsvpNama');
 
   if (guestName && guestName.trim() !== '') {
@@ -34,7 +36,13 @@ function initGuestPersonalization() {
     }
   } else {
     if (guestElement) {
-      guestElement.textContent = 'Bapak / Ibu / Saudara / i';
+      guestElement.textContent = 'Bapak / Ibu / Keluarga';
+    }
+  }
+
+  if (guestLocation && guestLocation.trim() !== '') {
+    if (guestLocElement) {
+      guestLocElement.textContent = 'di ' + decodeURIComponent(guestLocation.trim());
     }
   }
 }

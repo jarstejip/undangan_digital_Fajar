@@ -223,20 +223,35 @@ body {
 }
 
 .tamu-label {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-bottom: 3px;
+}
+
+.tamu-salutation {
+  font-size: 0.82rem;
+  color: var(--color-amber);
+  font-weight: 600;
+  letter-spacing: 0.5px;
   margin-bottom: 6px;
 }
 
 .tamu-name {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   word-break: break-word;
+}
+
+.tamu-location {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: 14px;
 }
 
 .tamu-desc {
