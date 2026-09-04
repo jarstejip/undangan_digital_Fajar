@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>The Wedding of Wira &amp; Neera - Undangan Pernikahan Digital</title>
+  <meta name="description" content="Undangan Pernikahan Digital Wira Bagus Setiawan Putra &amp; Neerafadiya Ayunda Syakira. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.">
+  <meta name="keywords" content="undangan pernikahan digital, wira dan neera, pernikahan adat jawa, royal javanese wedding, wedding invitation">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Wedding of Wira &amp; Neera">
+  <meta property="og:description" content="Kami mengundang Anda untuk hadir dan memberikan doa restu pada pernikahan kami.">
+  <meta property="og:image" content="assets/images/couple_cover.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/gunungan.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       AUDIO BACKGROUND & FLOATING CONTROLLER
+       =================================================================== -->
+  <audio id="weddingMusic" loop preload="auto">
+    <source src="assets/audio/gamelan-wedding.mp3" type="audio/mp3">
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+
+  <button id="floatingAudioBtn" class="floating-audio-btn" aria-label="Toggle Musik Pengiring" title="Putar / Hentikan Musik">
+    <svg id="audioIcon" viewBox="0 0 24 24">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+  </button>
+
+  <!-- ===================================================================
+       COVER / SPLASH MODAL (BUKA UNDANGAN)
+       =================================================================== -->
+  <div id="coverOverlay" class="cover-overlay">
+    <div class="cover-top">
+      <img src="assets/images/gunungan.svg" alt="Gunungan Wayang Jawa" class="cover-gunungan animate-float">
+      <p class="cover-tagline">Serat Ulem Pawiwahan</p>
+      <h2 class="hero-title-the">The Wedding Of</h2>
+      <h1 class="cover-couple-name">Wira &amp; Neera</h1>
+    </div>
+
+    <div class="cover-card-tamu animate-pulse-glow">
+      <p class="tamu-label">Kepada Yth.</p>
+      <h3 id="guestNameDisplay" class="tamu-name text-gold-gradient">Bapak Budi</h3>
+      <p class="tamu-desc">Tanpa mengurangi rasa hormat, kami bermaksud mengundang Anda untuk hadir dan memberikan doa restu di hari bahagia kami.</p>
+      <button id="btnBukaUndangan" class="btn-buka-undangan animate-pulse-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        Buka Undangan
+      </button>
+    </div>
+
+    <p style="font-size: 0.72rem; color: rgba(255,255,255,0.45); letter-spacing: 1px;">
+      Putar audio untuk pengalaman terbaik
+    </p>
+  </div>
+
+  <!-- ===================================================================
+       MAIN APP CONTAINER (CENTERED LUXURY MOBILE FRAME)
+       =================================================================== -->
+  <main class="app-container">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="section-hero">
+      <div class="hero-content">
+        <img src="assets/images/gunungan.svg" alt="Gunungan Jawa" class="hero-gunungan animate-float">
+        <p class="hero-subtitle">Walimatul 'Ursy</p>
+        <p class="hero-title-the">The Wedding Celebration Of</p>
+        <h1 class="hero-names text-gold-gradient">Wira &amp; Neera</h1>
+        <div class="hero-date-badge">
+          <span>Minggu</span> • 18 Oktober 2026 • <span>Yogyakarta</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DOA & KUTIPAN SUCI -->
+    <section class="section-doa">
+      <div class="card-doa">
+        <span class="section-tag">Kutipan Suci</span>
+        <p class="arabic-text">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+        </p>
+        <p class="doa-translation">
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+        </p>
+        <p class="doa-surah">- QS. Ar-Rum Ayat 21 -</p>
+      </div>
+    </section>
+
+    <!-- SECTION MEMPELAI (PROFIL PASANGAN) -->
+    <section id="mempelai" class="section-mempelai">
+      <span class="section-tag">Penganten Sekar Kedhaton</span>
+      <h2 class="section-title text-gold-gradient">Pasangan Mempelai</h2>
+      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
+
+      <p class="salam-pembuka">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+      <p class="teks-pengantar">
+        Maha Suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan. Dengan memohon rahmat dan ridho-Nya, kami bermaksud melangsungkan syukuran akad &amp; resepsi pernikahan kami:
+      </p>
+
+      <div class="mempelai-wrapper">
+        <!-- Kartu Pengantin Pria -->
+        <div class="mempelai-card">
+          <div class="mempelai-avatar-frame">
+            <img src="assets/images/groom.jpg" alt="Wira Bagus Setiawan Putra">
+          </div>
+          <h3 class="mempelai-name-full">Wira Bagus Setiawan Putra, S.T.</h3>
+          <p class="mempelai-call-name">- Wira -</p>
+          <p class="mempelai-parents">
+            Putra pertama dari pasangan:<br>
+            <strong>Bapak H. Bambang Setiawan</strong><br>&amp;<br><strong>Ibu Hj. Retno Wardani</strong><br>
+            <small style="color: var(--color-amber);">Beralamat di Sleman, D.I. Yogyakarta</small>
+          </p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social-ig">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            @wirabagus
+          </a>
+        </div>
+
+        <div class="mempelai-separator">&amp;</div>
+
+        <!-- Kartu Pengantin Wanita -->
+        <div class="mempelai-card">
+          <div class="mempelai-avatar-frame">
+            <img src="assets/images/bride.jpg" alt="Neerafadiya Ayunda Syakira">
+          </div>
+          <h3 class="mempelai-name-full">Neerafadiya Ayunda Syakira, S.Kom.</h3>
+          <p class="mempelai-call-name">- Neera -</p>
+          <p class="mempelai-parents">
+            Putri kedua dari pasangan:<br>
+            <strong>Bapak Ir. H. Agus Suryanto</strong><br>&amp;<br><strong>Ibu Hj. Dewi Anggraini</strong><br>
+            <small style="color: var(--color-amber);">Beralamat di Kota Yogyakarta</small>
+          </p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social-ig">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            @neerafadiya
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION HITUNG MUNDUR (COUNTDOWN TIMER) -->
+    <section class="section-countdown">
+      <span class="section-tag">Save The Date</span>
+      <h2 class="section-title text-gold-gradient">Menuju Hari Bahagia</h2>
+      <p class="section-subtitle">Menghitung detik demi detik menuju ikatan suci janji pernikahan kami.</p>
+
+      <div class="countdown-grid">
+        <div class="countdown-card">
+          <span id="cdDays" class="countdown-number">00</span>
+          <span class="countdown-label">Hari</span>
+        </div>
+        <div class="countdown-card">
+          <span id="cdHours" class="countdown-number">00</span>
+          <span class="countdown-label">Jam</span>
+        </div>
+        <div class="countdown-card">
+          <span id="cdMinutes" class="countdown-number">00</span>
+          <span class="countdown-label">Menit</span>
+        </div>
+        <div class="countdown-card">
+          <span id="cdSeconds" class="countdown-number">00</span>
+          <span class="countdown-label">Detik</span>
+        </div>
+      </div>
+
+      <!-- Tombol Simpan ke Kalender -->
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Wira+%26+Neera&dates=20261018T010000Z/20261018T070000Z&details=Undangan+Pernikahan+Wira+Bagus+Setiawan+Putra+%26+Neerafadiya+Ayunda+Syakira&location=Hyatt+Regency+Yogyakarta" 
+         target="_blank" rel="noopener noreferrer" class="btn-action-gold" style="margin: 0 auto; display: inline-flex;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/>
+        </svg>
+        Simpan ke Google Calendar
+      </a>
+    </section>
+
+    <!-- SECTION ACARA PERNIKAHAN -->
+    <section id="acara" class="section-acara">
+      <span class="section-tag">Waktu &amp; Tempat</span>
+      <h2 class="section-title text-gold-gradient">Rangkaian Acara</h2>
+      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
+
+      <!-- Kartu Akad Nikah -->
+      <div class="acara-card">
+        <span class="acara-badge">Sakral &amp; Khidmat</span>
+        <h3 class="acara-title">Akad Nikah</h3>
+
+        <div class="acara-date-box">
+          <div class="acara-date-day">Minggu</div>
+          <div class="acara-date-number">18</div>
+          <div class="acara-date-year">Oktober 2026</div>
+        </div>
+
+        <div class="acara-time">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-amber)"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
+          Pukul 08.00 - 10.00 WIB
+        </div>
+
+        <h4 class="acara-venue-name">Pendopo Ageng Sasana Budaya</h4>
+        <p class="acara-venue-address">
+          Jl. Kaliurang KM 9.5, Minomartani, Ngaglik, Sleman, Daerah Istimewa Yogyakarta
+        </p>
+
+        <div class="acara-actions">
+          <a href="https://maps.google.com/?q=Hyatt+Regency+Yogyakarta" target="_blank" rel="noopener noreferrer" class="btn-action-gold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Petunjuk Arah (Maps)
+          </a>
+        </div>
+      </div>
+
+      <!-- Kartu Resepsi Pernikahan -->
+      <div class="acara-card">
+        <span class="acara-badge">Pahargyan Temu Penganten</span>
+        <h3 class="acara-title">Resepsi Pernikahan</h3>
+
+        <div class="acara-date-box">
+          <div class="acara-date-day">Minggu</div>
+          <div class="acara-date-number">18</div>
+          <div class="acara-date-year">Oktober 2026</div>
+        </div>
+
+        <div class="acara-time">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-amber)"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
+          Pukul 11.00 - 14.00 WIB
+        </div>
+
+        <h4 class="acara-venue-name">Grand Ballroom Hyatt Regency Yogyakarta</h4>
+        <p class="acara-venue-address">
+          Jl. Palagan Tentara Pelajar, Panggung Sari, Sariharjo, Ngaglik, Sleman, D.I. Yogyakarta
+        </p>
+
+        <div class="acara-actions">
+          <a href="https://maps.google.com/?q=Hyatt+Regency+Yogyakarta" target="_blank" rel="noopener noreferrer" class="btn-action-gold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Petunjuk Arah (Maps)
+          </a>
+        </div>
+      </div>
+
+      <!-- Google Maps Interactive Frame -->
+      <div class="map-embed-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.518671607519!2d110.37059867575317!3d-7.734689276662768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a58e379cb0a8f%3A0xe541998782bb04c5!2sHyatt%20Regency%20Yogyakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi Pernikahan"></iframe>
+      </div>
+    </section>
+
+    <!-- SECTION SUSUNAN ACARA (RUNDOWN TIMELINE) -->
+    <section class="section-rundown">
+      <span class="section-tag">Tata Lampah</span>
+      <h2 class="section-title text-gold-gradient">Susunan Acara</h2>
+      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
+
+      <div class="timeline-vertical">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">07.30 - 08.00 WIB</div>
+          <div class="timeline-title">Kedatangan &amp; Registrasi Tamu</div>
+          <div class="timeline-desc">Keluarga dan para tamu undangan mulai tiba di area pelataran pendopo.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">08.00 - 09.30 WIB</div>
+          <div class="timeline-title">Prosesi Ijab Qabul (Akad Nikah)</div>
+          <div class="timeline-desc">Pembacaan ayat suci Al-Qur'an, khutbah nikah, ijab qabul sakral, doa, dan penyerahan mahar.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">09.30 - 10.30 WIB</div>
+          <div class="timeline-title">Upacara Adat Panggih Penganten</div>
+          <div class="timeline-desc">Upacara balangan suruh, wiji dadi (menginjak telur), sinduran, kacar-kucur, dulangan, dan sungkeman kepada orang tua.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">11.00 - 14.00 WIB</div>
+          <div class="timeline-title">Pahargyan Resepsi &amp; Ramah Tamah</div>
+          <div class="timeline-desc">Pemberian ucapan selamat, santap siang hidangan prasmanan khas Jawa, serta alunan gending gamelan Jawa klasik.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION KISAH CINTA (OUR STORY) -->
+    <section id="kisah" class="section-story">
+      <span class="section-tag">Crita Asmara</span>
+      <h2 class="section-title text-gold-gradient">Kisah Perjalanan Cinta</h2>
+      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
+
+      <div class="story-card">
+        <div class="story-card-header">
+          <div class="story-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <div>
+            <div class="story-year">2021</div>
+            <div class="story-headline">Awal Mula Berjumpa</div>
+          </div>
+        </div>
+        <p class="story-text">
+          Pertemuan pertama kami bermula dari sebuah proyek kolaborasi kreatif di Yogyakarta. Berawal dari diskusi pekerjaan yang santai, obrolan hangat perlahan menumbuhkan kecocokan rasa dan kedekatan yang istimewa di hati kami berdua.
+        </p>
+      </div>
+
+      <div class="story-card">
+        <div class="story-card-header">
+          <div class="story-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <div>
+            <div class="story-year">2024</div>
+            <div class="story-headline">Ikatan Janji &amp; Lamaran</div>
+          </div>
+        </div>
+        <p class="story-text">
+          Setelah melewati tiga tahun penuh canda, tawa, dan saling menguatkan dalam berbagai perjalanan hidup, Wira memberanikan diri menyatakan niat tulus untuk meminang Neera di hadapan kedua keluarga besar dalam acara lamaran adat Jawa yang hangat.
+        </p>
+      </div>
+
+      <div class="story-card">
+        <div class="story-card-header">
+          <div class="story-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 21l3.52-.61C9.36 20.73 10.64 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
+          </div>
+          <div>
+            <div class="story-year">2026</div>
+            <div class="story-headline">Menuju Pelaminan Suci</div>
+          </div>
+        </div>
+        <p class="story-text">
+          Kini dengan memohon ridho Allah SWT serta restu orang tua dan keluarga tercinta, kami memantapkan langkah merajut mahligai rumah tangga yang sakinah, mawaddah, warahmah dalam ikatan suci pernikahan.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION GALERI FOTO PREWEDDING & VIDEO -->
+    <section id="galeri" class="section-gallery">
+      <span class="section-tag">Dokumentasi</span>
+      <h2 class="section-title text-gold-gradient">Galeri Prewedding</h2>
+      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
+
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="assets/images/couple_cover.jpg" alt="Foto Prewedding Jawa Wira &amp; Neera" loading="lazy">
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/groom.jpg" alt="Wira Bagus Setiawan Putra" loading="lazy">
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/bride.jpg" alt="Neerafadiya Ayunda Syakira" loading="lazy">
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/gallery1.jpg" alt="Prewedding Garden Heritage" loading="lazy">
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/gallery2.jpg" alt="Prewedding Romantic Evening" loading="lazy">
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prewedding Video Trailer -->
+      <span class="section-tag" style="margin-top: 15px;">Sinematik Video</span>
+      <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: #fff; margin-bottom: 12px;">Prewedding Teaser</h3>
+      <div class="video-frame-container">
+        <iframe src="https://www.youtube.com/embed/7ztcdznpX9w?rel=0&modestbranding=1" 
+                title="Video Prewedding Teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- SECTION BUKU TAMU & RSVP (KONFIRMASI KEHADIRAN & UCAPAN) -->
+    <section id="rsvp" class="section-rsvp">
+      <span class="section-tag">Pawartos Kehadiran</span>
+      <h2 class="section-title text-gold-gradient">Buku Tamu &amp; RSVP</h2>
+      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
+      <p class="section-subtitle" style="margin-bottom: 25px;">
+        Kehadiran dan doa restu Anda merupakan karunia serta kebahagiaan terbesar bagi kami sekeluarga.
+      </p>
+
+      <!-- Form RSVP -->
+      <div class="rsvp-form-card">
+        <form id="rsvpForm">
+          <div class="form-group">
+            <label for="rsvpNama" class="form-label">Nama Lengkap</label>
+            <input type="text" id="rsvpNama" class="form-control" placeholder="Contoh: Bapak Budi" required>
+          </div>
+
+          <div class="form-group">
+            <label for="rsvpKehadiran" class="form-label">Konfirmasi Kehadiran</label>
+            <select id="rsvpKehadiran" class="form-control" required>
+              <option value="" disabled selected>-- Pilih Status Kehadiran --</option>
+              <option value="ya">Hadir</option>
+              <option value="tidak">Mohon Maaf, Berhalangan Hadir</option>
+              <option value="ragu">Masih Belum Pasti</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rsvpJumlah" class="form-label">Jumlah Orang yang Hadir</label>
+            <select id="rsvpJumlah" class="form-control">
+              <option value="1">1 Orang</option>
+              <option value="2" selected>2 Orang</option>
+              <option value="3">3 Orang</option>
+              <option value="4">4 Orang</option>
+              <option value="5">5 Orang atau Lebih</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rsvpUcapan" class="form-label">Ucapan &amp; Doa Restu</label>
+            <textarea id="rsvpUcapan" class="form-control" placeholder="Tuliskan doa restu dan pesan hangat untuk kedua mempelai..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-rsvp">
+            Kirim Konfirmasi &amp; Ucapan
+          </button>
+        </form>
+      </div>
+
+      <!-- Feed Ucapan Tamu Real-time -->
+      <div style="text-align: left; margin-bottom: 15px;">
+        <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: #fff;">
+          Untaian Doa &amp; Ucapan Sahabat
+        </h3>
+        <p style="font-size: 0.8rem; color: var(--color-text-muted);">
+          Terima kasih atas doa tulus yang telah Anda kirimkan:
+        </p>
+      </div>
+
+      <div id="ucapanFeed" class="ucapan-feed-container">
+        <!-- Komentar akan dimuat otomatis oleh JavaScript -->
+      </div>
+    </section>
+
+    <!-- SECTION AMPLOP DIGITAL & TITIP KADO -->
+    <section id="hadiah" class="section-gift">
+      <span class="section-tag">Tanda Kasih</span>
+      <h2 class="section-title text-gold-gradient">Amplop Digital</h2>
+      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
+
+      <p class="section-subtitle" style="margin-bottom: 25px;">
+        Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi merupakan ungkapan tanda kasih, Anda dapat memberi hadiah secara cashless di bawah ini:
+      </p>
+
+      <!-- Bank BCA -->
+      <div class="gift-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <span style="font-family: var(--font-display); font-weight: 900; font-size: 1.2rem; color: #00569e; background: #fff; padding: 2px 10px; border-radius: 6px;">BCA</span>
+          <span style="font-size: 0.72rem; color: var(--color-amber); border: 1px solid rgba(212,175,55,0.3); padding: 2px 8px; border-radius: 12px;">Bank Transfer</span>
+        </div>
+        <div class="bank-rek-number">8810 4923 18</div>
+        <div class="bank-holder-name">a.n. Wira Bagus Setiawan Putra</div>
+        <button class="btn-copy" data-copy="8810492318">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          Salin No. Rekening
+        </button>
+      </div>
+
+      <!-- Bank Mandiri -->
+      <div class="gift-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <span style="font-family: var(--font-display); font-weight: 900; font-size: 1.2rem; color: #f5a623; background: #003066; padding: 2px 10px; border-radius: 6px;">MANDIRI</span>
+          <span style="font-size: 0.72rem; color: var(--color-amber); border: 1px solid rgba(212,175,55,0.3); padding: 2px 8px; border-radius: 12px;">Bank Transfer</span>
+        </div>
+        <div class="bank-rek-number">1370 0192 8492 1</div>
+        <div class="bank-holder-name">a.n. Neerafadiya Ayunda Syakira</div>
+        <button class="btn-copy" data-copy="1370019284921">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          Salin No. Rekening
+        </button>
+      </div>
+
+      <!-- Titip Kado Fisik -->
+      <div class="gift-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <span style="font-size: 0.95rem; font-weight: 700; color: #fff;">📦 Kirim Kado Fisik</span>
+          <span style="font-size: 0.72rem; color: var(--color-amber); border: 1px solid rgba(212,175,55,0.3); padding: 2px 8px; border-radius: 12px;">Alamat Penerima</span>
+        </div>
+        <div style="font-size: 0.88rem; color: #fff; font-weight: 600; margin-bottom: 4px;">Kediaman Mempelai (Wira &amp; Neera)</div>
+        <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 14px;">
+          Jl. Kaliurang KM 9.5, Gg. Kenanga No. 12, Minomartani, Ngaglik, Kab. Sleman, D.I. Yogyakarta 55581 (No. HP: 0812-3456-7890)
+        </p>
+        <button class="btn-copy" data-copy="Jl. Kaliurang KM 9.5, Gg. Kenanga No. 12, Minomartani, Ngaglik, Kab. Sleman, D.I. Yogyakarta 55581 (Penerima: Wira / Neera - 081234567890)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          Salin Alamat Kirim
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION PROTOKOL & PENUTUP -->
+    <section class="section-closing">
+      <span class="section-tag">Matur Nuwun</span>
+      <h2 class="section-title text-gold-gradient">Ungkapan Terima Kasih</h2>
+      <img src="assets/images/ornament-divider.svg" alt="Ornamen" class="ornament-divider-img">
+
+      <!-- Protokol Kesehatan -->
+      <p style="font-size: 0.82rem; color: var(--color-text-muted); max-width: 360px; margin: 0 auto 15px;">
+        Demi kenyamanan bersama, acara ini diselenggarakan dengan tetap memperhatikan kenyamanan dan protokol kebersihan:
+      </p>
+
+      <div class="prokes-grid">
+        <div class="prokes-item">
+          <svg class="prokes-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+          <span class="prokes-label">Gunakan Masker Bila Kurang Sehat</span>
+        </div>
+        <div class="prokes-item">
+          <svg class="prokes-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+          <span class="prokes-label">Cuci Tangan / Hand Sanitizer</span>
+        </div>
+        <div class="prokes-item">
+          <svg class="prokes-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <span class="prokes-label">Salam Santun Tanpa Kontak</span>
+        </div>
+      </div>
+
+      <div class="closing-photo-frame">
+        <img src="assets/images/couple_cover.jpg" alt="Wira dan Neera" loading="lazy">
+      </div>
+
+      <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 20px;">
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kedua mempelai.<br><br>
+        Atas kehadiran dan doa restunya, kami ucapkan terima kasih yang sebesar-besarnya.<br>
+        <em>Matur sembah nuwun ingkang tanpa pepindhan.</em>
+      </p>
+
+      <p class="salam-pembuka" style="margin-bottom: 5px;">Wassalamu’alaikum Warahmatullahi Wabarakatuh</p>
+
+      <div class="closing-signature">Wira &amp; Neera</div>
+
+      <p class="closing-family">
+        Beserta segenap keluarga besar:<br>
+        <strong>Keluarga Bpk. H. Bambang Setiawan &amp; Ibu Hj. Retno Wardani</strong><br>
+        <strong>Keluarga Bpk. Ir. H. Agus Suryanto &amp; Ibu Hj. Dewi Anggraini</strong>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       FLOATING BOTTOM NAVIGATION BAR
+       =================================================================== -->
+  <nav class="bottom-nav">
+    <a href="#hero" class="nav-item active" title="Beranda">
+      <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a href="#mempelai" class="nav-item" title="Mempelai">
+      <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#acara" class="nav-item" title="Acara">
+      <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#kisah" class="nav-item" title="Kisah Cinta">
+      <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+      <span>Kisah</span>
+    </a>
+    <a href="#galeri" class="nav-item" title="Galeri">
+      <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#rsvp" class="nav-item" title="RSVP &amp; Ucapan">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+      <span>RSVP</span>
+    </a>
+    <a href="#hadiah" class="nav-item" title="Amplop Digital">
+      <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg>
+      <span>Kado</span>
+    </a>
+  </nav>
+
+  <!-- ===================================================================
+       LIGHTBOX MODAL FOR GALLERY
+       =================================================================== -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Tutup Galeri">&times;</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="Foto Resolusi Penuh">
+  </div>
+
+  <!-- Toast Notification element -->
+  <div id="toastNotification" class="toast-notification"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .kawung { fill: none; stroke: #d4af37; stroke-width: 1.2; opacity: 0.15; }
+      .inner-dot { fill: #d4af37; opacity: 0.2; }
+    </style>
+  </defs>
+  <!-- 4 overlapping Kawung ellipses -->
+  <ellipse cx="40" cy="20" rx="14" ry="20" class="kawung" />
+  <ellipse cx="40" cy="60" rx="14" ry="20" class="kawung" />
+  <ellipse cx="20" cy="40" rx="20" ry="14" class="kawung" />
+  <ellipse cx="60" cy="40" rx="20" ry="14" class="kawung" />
+  <!-- Corner intersections -->
+  <ellipse cx="0" cy="0" rx="14" ry="20" class="kawung" />
+  <ellipse cx="80" cy="0" rx="14" ry="20" class="kawung" />
+  <ellipse cx="0" cy="80" rx="14" ry="20" class="kawung" />
+  <ellipse cx="80" cy="80" rx="14" ry="20" class="kawung" />
+  <!-- Dots -->
+  <circle cx="40" cy="40" r="3" class="inner-dot" />
+  <circle cx="0" cy="40" r="2" class="inner-dot" />
+  <circle cx="80" cy="40" r="2" class="inner-dot" />
+  <circle cx="40" cy="0" r="2" class="inner-dot" />
+  <circle cx="40" cy="80" r="2" class="inner-dot" />
+</svg>
