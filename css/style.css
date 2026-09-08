@@ -1388,6 +1388,135 @@ textarea.form-control {
   color: #0b0c10;
 }
 
+/* QRIS Card Styling */
+.qris-card {
+  text-align: center;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-gold);
+  border-radius: 22px;
+  padding: 24px 18px 22px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.qris-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.qris-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qris-badge-tag {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #e51b24;
+  padding: 2px 9px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.qris-sub-tag {
+  font-size: 0.72rem;
+  color: var(--color-amber);
+}
+
+.qris-merchant-type {
+  font-size: 0.72rem;
+  color: var(--color-amber);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.qris-merchant-info {
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.qris-merchant-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.qris-nmid {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.qris-nmid span {
+  color: var(--color-gold-light);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.qris-image-wrapper {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 16px;
+  max-width: 280px;
+  margin: 0 auto 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.2);
+  border: 2px solid var(--color-border-gold);
+}
+
+.qris-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.qris-instruction {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  max-width: 320px;
+  margin: 0 auto 16px;
+}
+
+.qris-action-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-qris-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, var(--color-amber), var(--color-gold-primary));
+  color: #0b0c10;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-qris-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.5);
+  color: #0b0c10;
+}
+
 /* ===================================================================
    SECTION: PROTOKOL KESEHATAN & PENUTUP
    =================================================================== */

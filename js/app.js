@@ -334,6 +334,7 @@ const DEFAULT_WISHES = [
 function initRsvpAndWishes() {
   const rsvpForm = document.getElementById('rsvpForm');
   const feedContainer = document.getElementById('ucapanFeed');
+  if (!rsvpForm && !feedContainer) return;
 
   // Muat data dari localStorage atau gunakan default
   let storedWishes = [];

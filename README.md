@@ -34,12 +34,6 @@ Website undangan pernikahan digital bertema adat Jawa elegan (*Royal Javanese Da
    - Tombol petunjuk arah ke Google Maps.
    - Tombol **"Simpan ke Google Calendar"**.
    - Embed Google Maps interaktif lokasi SMK Bhakti Wiyata, Kediri.
-8. **Buku Tamu / RSVP Interaktif**:
-   - Formulir konfirmasi kehadiran dan pengiriman ucapan doa restu.
-   - Komentar tersimpan di penyimpanan browser (`localStorage`) dan langsung tampil secara *real-time*.
-9. **Amplop Digital & Kado Fisik**:
-    - Rekening Bank BCA & Bank Mandiri dengan tombol **1-Klik Salin Nomor Rekening** disertai notifikasi *toast*.
-    - Alamat pengiriman kado fisik dengan tombol **1-Klik Salin Alamat**.
 
 ---
 

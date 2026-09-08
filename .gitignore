@@ -30,3 +30,6 @@ desktop.ini
 
 # Vercel
 .vercel
+
+# Image backups
+*_backup.jpg
